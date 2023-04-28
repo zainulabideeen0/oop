@@ -1,0 +1,26 @@
+class Asset:
+    def _init_(self, asset_id, asset_type, asset_status):
+        self.asset_id = asset_id
+        self.asset_type = asset_type
+        self.asset_status = asset_status
+
+class Researcher:
+    def _init_(self, researcher_id, researcher_name):
+        self.researcher_id = researcher_id
+        self.researcher_name = researcher_name
+
+class Project:
+    def _init_(self, project_id, project_name):
+        self.project_id = project_id
+        self.project_name = project_name
+
+class AssetAllocation:
+    def _init_(self, asset_id, researcher_id, project_id, allocation_date, deallocation_date=None):
+        self.asset_id = asset_id
+        self.researcher_id = researcher_id
+        self.project_id = project_id
+        self.allocation_date = allocation_date
+        self.deallocation_date = deallocation_date
+        
+    def deallocate(self, deallocation_date):
+        self.deallocation_date = deallocation_date
